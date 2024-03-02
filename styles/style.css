@@ -5,6 +5,7 @@
 body {
   max-width: 1170px;
   margin: 60px auto;
+  font-family: "Mulish", sans-serif;
 }
 
 /* nav bar  */
@@ -65,4 +66,69 @@ i {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
+}
+
+/* banner section -------------------  */
+
+.banner-section {
+  background-image: url("/images/bgbanner.png");
+  background-color: #12132d;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin: 50px auto;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-head {
+  font-family: "Mulish", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: white;
+  line-height: 86px;
+  margin: 0;
+}
+
+.section-head span {
+  color: #797dfc;
+}
+
+.banner-section p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.btn-serach {
+  background-color: #797dfc;
+  padding: 10px 27px;
+  border: none;
+  border-radius: 46px;
+
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+.btn-inp-container {
+  max-width: 400px;
+  position: relative;
+}
+
+.btn-inp-container input {
+  padding: 18px 225px 18px 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
 }
