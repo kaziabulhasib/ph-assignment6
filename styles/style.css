@@ -1,0 +1,68 @@
+/* mulish google font  */
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  max-width: 1170px;
+  margin: 60px auto;
+}
+
+/* nav bar  */
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+i {
+  color: #12132d99;
+  background-color: #12132d08;
+  padding: 18px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 12px;
+  border: 1px solid #0307121a;
+}
+
+/* sign up button  */
+
+.btn-sign {
+  background-color: #797dfc;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
