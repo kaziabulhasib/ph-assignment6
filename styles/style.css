@@ -199,11 +199,11 @@ body {
 .post-container p {
   text-align: left;
 
-  width: 80%;
+  width: 100%;
   margin: 20px 0;
 }
 
-.post-container-top-part img {
+.post-container img {
   width: 72px;
   height: 72px;
   border-radius: 16px;

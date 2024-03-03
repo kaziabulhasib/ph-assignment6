@@ -12,33 +12,32 @@ const latestPost = async () => {
     <div class="post-container">
     <!-- img div  -->
     <div>
-      <img src="images/Rectangle 4.png" alt="" />
+      <img src="${post.image}" />
     </div>
     <!-- rest div  -->
     <div>
       <!-- author & category div  -->
       <div class="post-container-top-part">
-        <h6>#Music</h6>
-        <h6>Author : Awlad Hossain</h6>
+        <h6>#${post.category}</h6>
+        <h6>Author: ${post.author.name}</h6>
       </div>
-      <h2>10 Kids Unaware of Their Halloween Costume</h2>
+      <h2>${post.title}</h2>
       <p>
-        It’s one thing to subject yourself to ha Halloween costume
-        mishap because, hey that’s your prerogative
+      ${post.description}
       </p>
       <hr />
       <div class="post-stat-container">
         <div class="post-stat">
           <i class="fa-regular fa-message"></i>
-          <p>560</p>
+          <p>${post.comment_count}</p>
         </div>
         <div class="post-stat">
           <i class="fa-regular fa-eye"></i>
-          <p>1560</p>
+          <p>${post.view_count}</p>
         </div>
         <div class="post-stat">
           <i class="fa-regular fa-clock"></i>
-          <p>560</p>
+          <p>${post.posted_time} min</p>
         </div>
 
         <!-- <div class="post-stat">
