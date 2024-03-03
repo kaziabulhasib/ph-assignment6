@@ -156,16 +156,19 @@ body {
 }
 
 /* post contaner  */
-
+#parent-container-post {
+  flex: 2;
+}
 .post-container {
   background-color: #797dfc1a;
   padding: 40px;
   display: flex;
   /* justify-content: space-between; */
   gap: 24px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   border-radius: 24px;
-  flex: 2;
+
+  margin-bottom: 24px;
 }
 
 .post-container-top-part {
