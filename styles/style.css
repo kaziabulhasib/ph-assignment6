@@ -42,7 +42,7 @@ body {
   opacity: 1;
 }
 
-i {
+.nav-bar i {
   color: #12132d99;
   background-color: #12132d08;
   padding: 18px 16px;
@@ -76,7 +76,7 @@ i {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px;
-  margin: 50px auto;
+  margin: 50px auto 100px auto;
   border-radius: 32px;
   display: flex;
   justify-content: space-between;
@@ -131,4 +131,131 @@ i {
   border: none;
   outline: none;
   border-radius: 50px;
+}
+
+/* all post s3ection -----------------------------  */
+
+.allpost-container {
+  display: flex;
+  gap: 24px;
+}
+
+.allpost-main h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.allpost-main p {
+  width: 60%;
+  margin: 24px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* post contaner  */
+
+.post-container {
+  background-color: #797dfc1a;
+  padding: 40px;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 24px;
+  align-items: flex-start;
+  border-radius: 24px;
+  flex: 2;
+}
+
+.post-container-top-part {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+}
+
+.category-author-cont {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 20px;
+  margin-left: 16px;
+}
+
+.post-container-top-part h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #12132dcc;
+}
+.post-container h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #12132d;
+}
+
+.post-container p {
+  text-align: left;
+
+  width: 80%;
+  margin: 20px 0;
+}
+
+.post-container-top-part img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+}
+
+/* post stat part bottom ---------  */
+.post-stat-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.post-stat-container .post-stat {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* .post-stat-container .post-stat i {
+  color: #12132d99;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+} */
+
+/* click post button styele  */
+
+.click-post-btn {
+  margin-left: auto;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+}
+
+/* sidebar at right ----  */
+.post-container-sidebar {
+  display: flex;
+  flex: 1;
+  gap: 160px;
+  padding: 24px;
+  background-color: #12132d0d;
+  border-radius: 24px;
+}
+
+.post-container-sidebar h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #12132d;
+}
+
+.post-container-sidebar h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #12132d99;
 }
