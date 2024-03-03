@@ -57,7 +57,7 @@ latestPost();
 
 let clickCount = 0;
 const sidebarParent = document.getElementById("sidebar-parent");
-const clickPost = () => {
+const clickPost = (e) => {
   clickCount++;
   console.log(clickCount);
   document.getElementById("read-mark-count").innerText = clickCount;
@@ -69,4 +69,5 @@ const clickPost = () => {
 
   // append the div
   sidebarParent.appendChild(div);
+  console.log(e.target);
 };
