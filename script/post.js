@@ -7,7 +7,7 @@ const latestPost = async () => {
   const postContainer = document.getElementById("parent-container-post");
   posts.forEach((post) => {
     const div = document.createElement("div");
-    console.log(post);
+    // console.log(post);
     div.innerHTML = `
     <div class="post-container">
     <!-- img div  -->
@@ -54,3 +54,19 @@ const latestPost = async () => {
 };
 
 latestPost();
+
+let clickCount = 0;
+const sidebarParent = document.getElementById("sidebar-parent");
+const clickPost = () => {
+  clickCount++;
+  console.log(clickCount);
+  document.getElementById("read-mark-count").innerText = clickCount;
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <p>This is Title</p>  <p>007</p>
+ `;
+  div.style.display = "flex";
+
+  // append the div
+  sidebarParent.appendChild(div);
+};
