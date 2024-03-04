@@ -90,6 +90,7 @@ function clickPost(title, view_count) {
   div.appendChild(div1);
 
   div.style.display = "flex";
+  div.style.alignItems = "center";
   sidebarParent.appendChild(div);
 
   // tickshow
