@@ -45,7 +45,9 @@ const allPost = async () => {
         <!-- <div class="post-stat">
           b
         </div> -->
-        <button class="click-post-btn" onclick="clickPost(event)">
+        <button class="click-post-btn" onclick="clickPost('${escape(
+          post.title
+        )}', '${post.view_count}')">
           <i class="fa-solid fa-envelope-open"></i>
         </button>
       </div>
@@ -63,25 +65,25 @@ allPost();
 let clickCount = 0;
 const sidebarParent = document.getElementById("sidebar-parent");
 
-function clickPost(event) {
+function clickPost(title, view_count) {
   const postTitle = document.getElementById("post-title").innerText;
   // console.log(postTitle);
   clickCount++;
   document.getElementById("read-mark-count").innerText = clickCount;
   // cathing the title --------------
 
-  const titleText =
-    event.target.parentNode.parentNode.parentNode.querySelector("h2").innerText;
-  const viewContainer =
-    event.target.parentNode.querySelector("#post-view").innerHTML;
+  // const titleText =
+  //   event.target.parentNode.parentNode.parentNode.querySelector("h2").innerText;
+  // const viewContainer =
+  //   event.target.parentNode.querySelector("#post-view").innerHTML;
 
   // console.log(event.target.parentNode.parentNode.childNodes[5]);
 
   const div = document.createElement("div");
   const p1 = document.createElement("p");
   const div1 = document.createElement("div");
-  p1.innerText = titleText;
-  div1.innerHTML = viewContainer;
+  p1.innerText = unescape(title);
+  div1.innerHTML = view_count;
   div1.classList.add("post-stat");
 
   div.appendChild(p1);
