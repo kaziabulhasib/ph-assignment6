@@ -5,14 +5,16 @@ const allPost = async () => {
   const data = await response.json();
   const posts = data.posts;
   const postContainer = document.getElementById("parent-container-post");
+
   posts.forEach((post) => {
     const div = document.createElement("div");
     // console.log(post);
     div.innerHTML = `
     <div class="post-container">
     <!-- img div  -->
-    <div>
+    <div class="all-post-profile-pic-div">
       <img src="${post.image}" />
+      <div id="dot-div"> </div>
     </div>
     <!-- rest div  -->
     <div>
@@ -21,7 +23,7 @@ const allPost = async () => {
         <h6>#${post.category}</h6>
         <h6>Author: ${post.author.name}</h6>
       </div>
-      <h2>${post.title}</h2>
+      <h2 id="post-title">${post.title}</h2>
       <p>
       ${post.description}
       </p>
@@ -31,7 +33,7 @@ const allPost = async () => {
           <i class="fa-regular fa-message"></i>
           <p>${post.comment_count}</p>
         </div>
-        <div class="post-stat">
+        <div class="post-stat" id="post-view">
           <i class="fa-regular fa-eye"></i>
           <p>${post.view_count}</p>
         </div>
@@ -43,34 +45,55 @@ const allPost = async () => {
         <!-- <div class="post-stat">
           b
         </div> -->
-        <button class="click-post-btn" onclick="clickPost()">
+        <button class="click-post-btn" onclick="clickPost(event)">
           <i class="fa-solid fa-envelope-open"></i>
         </button>
       </div>
     </div>
     `;
     postContainer.appendChild(div);
+    const aSIndicator = document.getElementById("dot-div");
   });
 };
 
 allPost();
 
+// click post functionality tough part -------------
+
 let clickCount = 0;
 const sidebarParent = document.getElementById("sidebar-parent");
-const clickPost = (e) => {
-  clickCount++;
-  console.log(clickCount);
-  document.getElementById("read-mark-count").innerText = clickCount;
-  const div = document.createElement("div");
-  div.innerHTML = `
-  <p>This is Title</p>  <p>007</p>
- `;
-  div.style.display = "flex";
 
-  // append the div
+function clickPost(event) {
+  const postTitle = document.getElementById("post-title").innerText;
+  // console.log(postTitle);
+  clickCount++;
+  document.getElementById("read-mark-count").innerText = clickCount;
+  // cathing the title --------------
+
+  const titleText =
+    event.target.parentNode.parentNode.parentNode.querySelector("h2").innerText;
+  const viewContainer =
+    event.target.parentNode.querySelector("#post-view").innerHTML;
+
+  // console.log(event.target.parentNode.parentNode.childNodes[5]);
+
+  const div = document.createElement("div");
+  const p1 = document.createElement("p");
+  const div1 = document.createElement("div");
+  p1.innerText = titleText;
+  div1.innerHTML = viewContainer;
+  div1.classList.add("post-stat");
+
+  div.appendChild(p1);
+  div.appendChild(div1);
+
+  div.style.display = "flex";
   sidebarParent.appendChild(div);
-  console.log(e.target);
-};
+
+  // tickshow
+
+  document.getElementById("read-tick").style.display = "inline";
+}
 
 // latst post function -------------------------------------------
 
