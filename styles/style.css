@@ -274,6 +274,7 @@ body {
   background-color: #12132d;
   border-radius: 32px;
   color: white;
+  width: 100%;
 }
 
 .forum-section h1 {
@@ -308,8 +309,32 @@ body {
 
 .latest-post-container {
   display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 48px auto;
 }
 
+.single-post-container {
+  border: 1px solid #12132d26;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.single-post-container h4 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 800;
+  margin: 16px auto;
+}
+
+#single-post-description {
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 16px auto;
+}
 .latest-post-container .date-container {
   display: flex;
   align-items: center;
@@ -318,6 +343,33 @@ body {
   margin: 0;
 }
 
+.autthor-des-div {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.autthor-des-div img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.autthor-des-div .auth-name {
+  color: #12132d;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.autthor-des-div .auth-desig {
+  color: #12132d99;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
 /* footer section -------------------------------  */
 
 .footer {
