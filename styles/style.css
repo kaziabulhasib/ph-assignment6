@@ -274,7 +274,6 @@ body {
   background-color: #12132d;
   border-radius: 32px;
   color: white;
-  width: 100%;
 }
 
 .forum-section h1 {
@@ -318,6 +317,16 @@ body {
   border: 1px solid #12132d26;
   border-radius: 24px;
   padding: 24px;
+}
+.single-post-container .single-post-img-div {
+  width: 325px;
+  height: 190px;
+  margin: 20px auto;
+}
+.single-post-container .latest-post-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 .single-post-container h4 {
@@ -376,7 +385,7 @@ body {
   text-align: center;
   background-color: #bebec22f;
   padding: 100px;
-  width: 100%;
+  margin-top: 100px;
 }
 
 .footer .social-icon {
